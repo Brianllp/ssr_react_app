@@ -1,7 +1,7 @@
 import React from "react";
 import express from "express";
-import ssr from "./views/ssr.js";
-import App from "./views/App.js";
+import ssr from "../views/ssr.js";
+import App from "../views/App.js";
 import { renderToString } from 'react-dom/server';
 
 const app = express();
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   const html = `
     <html>
       <head>
-        <script src="./src/index.txs"></script>
+        <script src="./frontend/src/index.txs"></script>
       </head>
       <body>
           <div id="app">

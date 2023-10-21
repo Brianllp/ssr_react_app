@@ -8,7 +8,7 @@ module.exports = {
   },
   entry: {
     // エントリーポイントの指定
-    client: './src/index.tsx',
+    client: './frontend/src/index.tsx',
     // client: './ssr/client.tsx',
   },
   output: {

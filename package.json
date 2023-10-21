@@ -1,7 +1,7 @@
 {
   "name": "ssr_react_app",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "server/index.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,11 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node -r esm index.js",
+    "start": "node -r esm server/index.js",
     "build": "webpack --mode development",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "babel": "babel src -x '.ts,.tsx' -d views"
+    "babel": "babel frontend/src -x '.ts,.tsx' -d views"
   },
   "eslintConfig": {
     "extends": [
