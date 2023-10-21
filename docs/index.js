@@ -1712,7 +1712,7 @@ eval("\nvar global = __webpack_require__(/*! ../internals/global */ \"./node_mod
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"client": 0
+/******/ 			"index": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = function(chunkId, promises) {
