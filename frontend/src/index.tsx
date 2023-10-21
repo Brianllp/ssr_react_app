@@ -2,6 +2,7 @@ import React from 'react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { hydrate } from 'react-dom';
+import './index.scss';
 
 hydrate(<App />, document.querySelector('#app'));
 

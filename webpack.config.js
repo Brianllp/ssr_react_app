@@ -1,15 +1,14 @@
-// import path from 'path';
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   resolve: {
     // 対象にする拡張子の指定
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
   },
   entry: {
     // エントリーポイントの指定
     client: './frontend/src/index.tsx',
-    // client: './ssr/client.tsx',
   },
   output: {
     // アウトプット先のディレクトリを指定(assets)
@@ -50,6 +49,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.scss/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
+      }
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin(
+      {
+        filename: 'style.scss'
+      }
+    )
+  ],
 };

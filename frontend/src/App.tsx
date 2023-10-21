@@ -61,16 +61,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//       <div>Learn React</div>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

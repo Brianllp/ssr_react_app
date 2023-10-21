@@ -13,7 +13,8 @@ app.get("/", (req, res) => {
   const html = `
     <html>
       <head>
-        <script src="./frontend/src/index.txs"></script>
+        <script src="client.js"></script>
+        <link rel="stylesheet" href="style.scss">
       </head>
       <body>
           <div id="app">
