@@ -1,6 +1,5 @@
 import React from "react";
 import express from "express";
-import ssr from "../views/ssr.js";
 import App from "../views/App.js";
 import { renderToString } from 'react-dom/server';
 
@@ -24,11 +23,6 @@ app.get("/", (req, res) => {
     </html>
   `;
   res.send(html);
-});
-
-app.get("/ssr_sample", (req, res) => {
-  const response = ssr();
-  res.send(response);
 });
 
 app.listen(port, () => {
