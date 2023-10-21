@@ -8,7 +8,8 @@ module.exports = {
   },
   entry: {
     // エントリーポイントの指定
-    client: './ssr/client.tsx',
+    client: './src/index.tsx',
+    // client: './ssr/client.tsx',
   },
   output: {
     // アウトプット先のディレクトリを指定(assets)
