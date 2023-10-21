@@ -20,7 +20,11 @@
   "scripts": {
     "start": "node -r esm server/index.js",
     "build": "webpack --mode development",
-    "babel": "babel frontend/src -x '.ts,.tsx' -d views"
+    "babel": "babel frontend/src -x '.ts,.tsx' -d views",
+    "rm": "rm -rf docs",
+    "mv": "cp -r assets docs",
+    "git": "git add -A && git commit && git push origin master",
+    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
   },
   "eslintConfig": {
     "extends": [
