@@ -5,10 +5,20 @@ module.exports = {
   resolve: {
     // 対象にする拡張子の指定
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
+    // https://madogiwa0124.hatenablog.com/entry/2021/02/13/120741
+    alias: {
+      querystring: "querystring-es3",
+      zlib: "browserify-zlib/lib",
+      path: "path-browserify",
+      stream: "stream-browserify",
+      http: "stream-http",
+      crypto: "crypto-browserify",
+    },
   },
+  target: 'node',
   entry: {
     // エントリーポイントの指定
-    index: './frontend/src/index.tsx',
+    index: './server/index.js',
   },
   output: {
     // アウトプット先のディレクトリを指定(assets)
@@ -66,4 +76,8 @@ module.exports = {
       }
     )
   ],
+  ignoreWarnings: [{
+    module: /node_modules\/express\/lib\/view\.js/,
+    message: /the request of a dependency is an expression/,
+  }],
 };
