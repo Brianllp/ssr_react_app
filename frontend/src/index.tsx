@@ -2,7 +2,6 @@ import React from 'react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { hydrateRoot } from 'react-dom/client';
-import './index.scss';
 
 const container = document.getElementById('app');
 if (container) {

@@ -29,9 +29,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ts(x?)$/,
+        use: 'ts-loader',
+      },
+      {
         // 拡張子が.tsか.tsxだった場合に適用するルール
         test: /\.ts(x?)$/,
-        // node_modulesディレクトリ(Yarnでインストールしたパッケージが入ってる)は除外
+        // node_modulesディレクトリは除外
         exclude: /node_modules/,
         use: [
           {
@@ -72,7 +76,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(
       {
-        filename: 'style.scss'
+        filename: 'style.css'
       }
     )
   ],
